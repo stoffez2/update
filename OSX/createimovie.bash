@@ -7,7 +7,6 @@ PlexConnectPath=${PWD}
 
 createplistbash.bash
 stopbash.bash
-startbash.bash
 
 ## check SSL certificate
 file="${PlexConnectPath}/assets/certificates/trailers.pem"
@@ -35,8 +34,6 @@ while : ; do
 done
 sed -i '' 's/trailers.apple.com/www.icloud.com/g' Settings.cfg
 sed -i '' 's/secure.marketwatch.com/www.icloud.com/g' Settings.cfg
-
-restartbash.bash
 
 ## Display Settings.cfg
 FILE="/Applications/PlexConnect/Settings.cfg"
