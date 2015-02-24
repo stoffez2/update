@@ -5,7 +5,6 @@ cd __INSTALLERPATH__
 cd ../..
 PlexConnectPath=${PWD}
 
-createplistbash.bash
 stopbash.bash
 
 ## check SSL certificate
@@ -24,18 +23,3 @@ openssl x509 -in ./assets/certificates/trailers.pem -outform der -out ./assets/c
 echo 'Generating Imovie certs'
 echo 'Settings.cfg changed to hijack www.icloud.com'
 echo 'Upload profile to ATV using this url http://www.icloud.com/trailers.cer'
-
-fi
-
-while : ; do
-    [[ -f "/Applications/PlexConnect/Settings.cfg" ]] && break
-    echo "Pausing until file exists."
-    sleep 1
-done
-sed -i '' 's/trailers.apple.com/www.icloud.com/g' Settings.cfg
-sed -i '' 's/secure.marketwatch.com/www.icloud.com/g' Settings.cfg
-
-## Display Settings.cfg
-FILE="/Applications/PlexConnect/Settings.cfg"
-echo "*** File - $FILE contents ***"
-cat $FILE
