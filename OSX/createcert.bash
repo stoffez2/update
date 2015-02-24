@@ -5,8 +5,6 @@ cd __INSTALLERPATH__
 cd ../..
 PlexConnectPath=${PWD}
 
-stopbash.bash
-
 ## check SSL certificate
 file="${PlexConnectPath}/assets/certificates/trailers.pem"
 if [ -f "$file" ]; then
@@ -23,4 +21,9 @@ openssl x509 -in ./assets/certificates/trailers.pem -outform der -out ./assets/c
 echo 'Generating Trailers certs'
 echo 'Settings.cfg changed to hijack trailers.apple.com'
 echo 'Upload profile to ATV using this url http://trailers.apple.com/trailers.cer'
+
+fi
+
+
+
 

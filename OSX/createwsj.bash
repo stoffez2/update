@@ -5,8 +5,6 @@ cd __INSTALLERPATH__
 cd ../..
 PlexConnectPath=${PWD}
 
-stopbash.bash
-
 ## check SSL certificate
 file="${PlexConnectPath}/assets/certificates/trailers.pem"
 if [ -f "$file" ]; then
@@ -25,3 +23,4 @@ echo 'Generating WSJ certs'
 echo 'Settings.cfg changed to hijack secure.marketwatch.com'
 echo 'Upload profile to ATV using this url http://secure.marketwatch.com/trailers.cer'
 
+fi
