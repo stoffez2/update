@@ -63,6 +63,9 @@ sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createw
 ## save directly to the /usr/bin folder
 sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createcert.bash" > /usr/bin/createcert.bash
 
+## replace __DEFAULTPATH__ in default createplist.bash
+## save directly to the /usr/bin folder
+sed -e "s/__DEFAULTPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createplist.bash" > /usr/bin/createplist.bash
 
 ## fix permissions
 chmod +x /usr/bin/backupatvsettings.bash
