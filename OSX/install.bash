@@ -22,8 +22,6 @@ wq
 EOF
 
 ## copy files to /usr/bin for system wide access
-cp backupatvsettings.bash /usr/bin
-cp backupatvsettingsbash.bash /usr/bin
 cp createcert.bash /usr/bin
 cp createcertbash.bash /usr/bin
 cp createimovie.bash /usr/bin
@@ -38,8 +36,6 @@ cp lognormal.bash /usr/bin
 cp lognormalbash.bash /usr/bin
 cp purgesettings.bash /usr/bin
 cp purgesettingsbash.bash /usr/bin
-cp restoreatvsettings.bash /usr/bin
-cp restoreatvsettingsbash.bash /usr/bin
 cp restorecertsbash.bash /usr/bin
 cp restorecerts.bash /usr/bin
 cp restart.bash /usr/bin
@@ -70,8 +66,6 @@ sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createc
 sed -e "s/__DEFAULTPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createplist.bash" > /usr/bin/createplist.bash
 
 ## fix permissions
-chmod +x /usr/bin/backupatvsettings.bash
-chmod +x /usr/bin/backupatvsettingsbash.bash
 chmod +x /usr/bin/createcert.bash
 chmod +x /usr/bin/createcertbash.bash
 chmod +x /usr/bin/createimovie.bash
@@ -86,8 +80,6 @@ chmod +x /usr/bin/lognormal.bash
 chmod +x /usr/bin/lognormalbash.bash
 chmod +x /usr/bin/purgesettings.bash
 chmod +x /usr/bin/purgesettingsbash.bash
-chmod +x /usr/bin/restoreatvsettings.bash
-chmod +x /usr/bin/restoreatvsettingsbash.bash
 chmod +x /usr/bin/restorecerts.bash
 chmod +x /usr/bin/restorecertsbash.bash
 chmod +x /usr/bin/restart.bash
@@ -107,8 +99,6 @@ chmod +x /usr/bin/trashbasebash.bash
 
 ## PlexConnect Commands
 ## appwewebhome.bash fixes appweb.bash
-chmod 4755 /usr/bin/backupatvsettings.bash
-chmod 4755 /usr/bin/restoreatvsettings.bash
 chmod 4755 /usr/bin/loghigh.bash
 chmod 4755 /usr/bin/lognormal.bash
 chmod 4755 /usr/bin/start.bash
